@@ -22,3 +22,7 @@ GitHub Pages 使用 `main` 分支根目录。更新后提交并推送，Pages会
 - 图片和项目标识由团队保留权利。
 
 主要文件：`index.html`、`styles.css`、`app.js`、`assets/eztrade-logo.png`。
+
+## 中英文切换
+
+导航栏提供中文 / EN 切换，覆盖静态文案、报价演示、FAQ、无障碍标签、页面标题及联系邮件主题。默认中文，访客选择可在本地记忆；`?lang=en` 或 `?lang=zh` 可直接分享指定语言页面。英文文案位于 `i18n.js`，中文源文案保留在 `index.html`；演示场景与短状态文案在 `app.js`。
