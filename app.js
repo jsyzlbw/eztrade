@@ -2,11 +2,12 @@
 const scenarios = {
   initial: { message:'We need 1,000 custom boxes.<br>Could you send us a quote?', version:'v1', quantity:'1,000', price:'2.75', total:'2,750', zh:{state:'待人工审核',rule:'依据已确认规格与数量规则计算',next:'核对价格和交期，再发送客户回复。',announcement:'初次报价示例：1000件，参考单价2.75元，待人工审核。'}, en:{state:'Awaiting review',rule:'Calculated from confirmed specifications and quantity rules',next:'Review the price and delivery terms before replying.',announcement:'First quote example: 1,000 units at CNY 2.75 each, awaiting human review.'} },
   change: { message:'Can we change the quantity to 2,000?<br>Please update the quotation.', version:'v2', quantity:'2,000', price:'2.63', total:'5,260', zh:{state:'变更后需复核',rule:'数量变化，重新计算并更新报价版本',next:'确认新报价，避免沿用上一版价格。',announcement:'数量变更示例：2000件，参考单价2.63元，需重新审核。'}, en:{state:'Review changes',rule:'Quantity changed: recalculated and saved as a new version',next:'Approve the updated quote so the previous price is not reused.',announcement:'Quantity change example: 2,000 units at CNY 2.63 each, requiring a new review.'} },
-  follow: { message:'Thanks for the quote.<br>Could you confirm the delivery date?', version:'v2', quantity:'2,000', price:'2.63', total:'5,260', zh:{state:'待确认交期',rule:'客户在意交付时间，价格沿用当前版本',next:'核实工厂可交付日期，再起草跟进回复。',announcement:'跟进示例：客户询问交期，需要业务员核实后回复。'}, en:{state:'Confirm delivery',rule:'Customer asks about delivery; the current quote is unchanged',next:'Check the available delivery date, then draft a reply.',announcement:'Follow-up example: the customer asks about delivery. Confirm the date before replying.'} }
+  follow: { message:'Thanks for the quote.<br>Could you confirm the delivery date?', version:'v2', quantity:'2,000', price:'2.63', total:'5,260', zh:{state:'待确认交期',rule:'客户在意交付时间，价格沿用当前版本',next:'核实工厂可交付日期，再起草跟进回复。',announcement:'跟进示例：客户询问交期，需要业务员核实后回复。'}, en:{state:'Confirm delivery',rule:'Customer asks about delivery; the current quote is unchanged',next:'Check the available delivery date, then draft a reply.',announcement:'Follow-up example: the customer asks about delivery. Confirm the date before replying.'} },
+  pause: {message:'We plan to order next month.<br>Please check back with us then.',version:'v2',quantity:'2,000',price:'2.63',total:'5,260',zh:{state:'采购暂缓',rule:'已记录客户反馈，当前催问应暂停',next:'确认客户方便联系的时间，再安排后续跟进。',announcement:'暂缓采购示例：客户计划下月采购，应暂停当前催问并商定后续联系。'},en:{state:'Purchase on hold',rule:'Customer feedback recorded; pause current reminders',next:'Agree on a suitable time to get back in touch.',announcement:'Purchase on hold example: the customer plans to order next month. Pause current reminders and agree on when to follow up.'}}
 };
 const uiCopy = {
-  zh:{title:'EZTrade 易贸｜展会之后，让生意继续',description:'EZTrade 易贸，面向制造企业的外贸询盘、报价与客户跟进助手。从展会后的需求整理开始，让报价有依据，让每一次跟进有下一步。正在开发，欢迎企业参与需求交流。',ogDescription:'整理询盘，准备报价，跟进客户。面向制造企业的外贸工作助手，现招募共创企业。',openMenu:'打开导航',closeMenu:'关闭导航',navigation:'主导航',home:'EZTrade 易贸首页',demo:'报价流程概念演示，使用模拟数据',scenarios:'切换模拟业务场景',copy:'复制联系邮箱',copied:'已复制',copyFailed:'请选中左侧邮箱复制',unit:'件',subject:'EZTrade 易贸｜企业需求交流'},
-  en:{title:'EZTrade | Keep business moving after the trade show',description:'An inquiry, quoting and follow-up assistant for manufacturers. Turn scattered requirements into grounded quotes and clear next steps. In development and seeking design partners.',ogDescription:'Organize inquiries, prepare quotes and follow up with customers. An export workflow assistant for manufacturers, now seeking design partners.',openMenu:'Open navigation',closeMenu:'Close navigation',navigation:'Main navigation',home:'EZTrade home',demo:'Quoting concept demo using sample data',scenarios:'Choose a sample business scenario',copy:'Copy contact email',copied:'Copied',copyFailed:'Please select and copy the email address',unit:'units',subject:'EZTrade | Let’s discuss our export workflow'}
+  zh:{title:'Quotient 报价星｜展会之后，让生意继续',description:'Quotient 报价星，面向制造企业的展会商机报价与销售跟进助手。从展会后的需求整理开始，让报价有依据，让每一次跟进有下一步。正在开发，欢迎企业参与需求交流。',ogDescription:'整理询盘，准备报价，跟进客户。面向制造企业的外贸工作助手，现招募共创企业。',openMenu:'打开导航',closeMenu:'关闭导航',navigation:'主导航',home:'Quotient 报价星首页',demo:'报价流程概念演示，使用模拟数据',scenarios:'切换模拟业务场景',copy:'复制联系邮箱',copied:'已复制',copyFailed:'请选中左侧邮箱复制',unit:'件',subject:'Quotient 报价星｜企业需求交流'},
+  en:{title:'Quotient | Keep business moving after the trade show',description:'An inquiry, quoting and follow-up assistant for manufacturers. Turn scattered requirements into grounded quotes and clear next steps. In development and seeking design partners.',ogDescription:'Organize inquiries, prepare quotes and follow up with customers. An export workflow assistant for manufacturers, now seeking design partners.',openMenu:'Open navigation',closeMenu:'Close navigation',navigation:'Main navigation',home:'Quotient home',demo:'Quoting concept demo using sample data',scenarios:'Choose a sample business scenario',copy:'Copy contact email',copied:'Copied',copyFailed:'Please select and copy the email address',unit:'units',subject:'Quotient | Let’s discuss our export workflow'}
 };
 const controls = document.querySelectorAll('[data-scenario]');
 const languageButtons = document.querySelectorAll('[data-lang]');
@@ -51,7 +52,7 @@ function applyLanguage(language, userInitiated = false){
   document.querySelector('.email-link').href = `mailto:liangbowenbill@gmail.com?subject=${encodeURIComponent(copy.subject)}`;
   renderScenario(userInitiated);
   if(userInitiated){
-    try { localStorage.setItem('eztrade-language',currentLanguage); } catch { /* Language still works when storage is unavailable. */ }
+    try { localStorage.setItem('quotient-language',currentLanguage); } catch { /* Language still works when storage is unavailable. */ }
     const url = new URL(window.location.href);
     url.searchParams.set('lang',currentLanguage);
     history.replaceState(null,'',url);
@@ -69,6 +70,6 @@ document.getElementById('copy-email').addEventListener('click',async()=>{
   catch{status.textContent=uiCopy[currentLanguage].copyFailed;}
 });
 let savedLanguage='zh';
-try{savedLanguage=localStorage.getItem('eztrade-language')||'zh';}catch{/* Use the default language. */}
+try{savedLanguage=localStorage.getItem('quotient-language')||'zh';}catch{/* Use the default language. */}
 const requestedLanguage=new URLSearchParams(window.location.search).get('lang');
 applyLanguage(['en','zh'].includes(requestedLanguage)?requestedLanguage:savedLanguage);
