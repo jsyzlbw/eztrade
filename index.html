@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101922">
+  <meta name="description" content="EZTrade 易贸，面向制造企业的外贸询盘、报价与客户跟进助手。从展会后的需求整理开始，让报价有依据，让每一次跟进有下一步。正在开发，欢迎企业参与需求交流。">
+  <meta property="og:title" content="EZTrade 易贸｜展会之后，让生意继续">
+  <meta property="og:description" content="整理询盘，准备报价，跟进客户。面向制造企业的外贸工作助手，现招募共创企业。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:image" content="https://jsyzlbw.github.io/eztrade/assets/eztrade-logo.png">
+  <meta property="og:url" content="https://jsyzlbw.github.io/eztrade/">
+  <title>EZTrade 易贸｜展会之后，让生意继续</title>
+  <link rel="canonical" href="https://jsyzlbw.github.io/eztrade/">
+  <link rel="icon" href="assets/eztrade-logo.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳至正文</a>
+<main id="main">
+<div class="dark-opening">
+<header class="header wrap">
+  <a class="brand" href="#" aria-label="EZTrade 易贸首页"><img src="assets/eztrade-logo.png" alt="EZTrade 易贸" width="1693" height="929"></a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="navigation" aria-label="打开导航"><span></span><span></span></button>
+  <nav id="navigation" aria-label="主导航"><a href="#capabilities">产品能力</a><a href="#workflow">工作流程</a><a href="#principles">我们的方式</a><a class="nav-contact" href="#contact">一起打磨易贸 <span aria-hidden="true">↗</span></a></nav>
+</header>
+<section class="hero wrap" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <div class="eyebrow light"><span class="live-dot"></span> 正在开发 · 邀请企业共创</div>
+    <h1 id="hero-title">展会之后，<br>让生意<span class="cyan">继续。</span></h1>
+    <p class="hero-description">把分散的客户需求，变成有依据的报价。<br class="desktop-only">让每一次跟进，都有清楚的下一步。</p>
+    <p class="hero-context">面向制造企业的外贸询盘与报价助手</p>
+    <div class="hero-actions"><a class="button primary" href="#contact">聊聊贵司的需求 <span aria-hidden="true">↗</span></a><a class="text-link" href="#workflow">看看如何工作 <span aria-hidden="true">↓</span></a></div>
+    <div class="hero-footnote"><span>从一类产品开始</span><i></i><span>关键承诺由业务员确认</span></div>
+  </div>
+  <div class="demo" aria-label="报价流程概念演示，使用模拟数据">
+    <div class="demo-top"><span class="demo-wordmark">EZ<span>Trade</span></span><span class="demo-label">概念演示 / 示例数据</span><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div></div>
+    <div class="demo-content">
+      <div class="demo-heading"><span class="mono">INQUIRY / 001</span><span class="tiny-status">展会后跟进</span></div>
+      <div class="buyer"><span class="avatar" aria-hidden="true">↙</span><div><span class="micro">客户需求</span><p id="buyer-message">We need 1,000 custom boxes.<br>Could you send us a quote?</p></div></div>
+      <div class="connect-line" aria-hidden="true"><span>↓</span><i></i><span>需求与企业规则关联</span></div>
+      <div class="quote-sheet">
+        <div class="quote-title"><div><span class="micro">报价草稿</span><h3>定制纸盒 <span id="version">v1</span></h3></div><span id="quote-state" class="review-state">待人工审核</span></div>
+        <dl class="quote-values"><div><dt>采购数量</dt><dd id="quantity">1,000 <small>件</small></dd></div><div><dt>参考单价</dt><dd id="unit-price">¥ 2.75</dd></div><div><dt>报价总额</dt><dd id="total">¥ 2,750</dd></div></dl>
+        <div class="quote-rule"><span aria-hidden="true">✓</span><span id="rule-note">依据已确认规格与数量规则计算</span></div>
+        <p class="quote-disclaimer">模拟金额，不含税费与运费，不构成实际报价。</p>
+      </div>
+      <div class="next-action"><span class="next-icon" aria-hidden="true">↗</span><div><span class="micro">建议下一步</span><p id="next-action">核对价格和交期，再发送客户回复。</p></div></div>
+    </div>
+    <div class="demo-controls" role="group" aria-label="切换模拟业务场景"><button data-scenario="initial" class="selected" aria-pressed="true">初次报价</button><button data-scenario="change" aria-pressed="false">客户改数量</button><button data-scenario="follow" aria-pressed="false">准备跟进</button></div>
+    <span class="sr-only" id="demo-announcement" aria-live="polite"></span>
+  </div>
+</section>
+<div class="opening-bottom wrap"><span class="mono">LESS REPETITION. MORE CONVERSATION.</span><span>留住展会上建立的联系，把时间还给客户。</span></div>
+</div>
+<section class="intro section wrap" id="capabilities" aria-labelledby="capabilities-title">
+  <div class="section-kicker"><span class="mono">01 / WHAT WE DO</span><span>产品方案</span></div>
+  <div class="section-heading"><h2 id="capabilities-title">少一点反复整理，<br>多一点有效沟通。</h2><p>客户资料在名片里，规格在聊天里，价格在表格里。<br>易贸计划把这些信息连接起来，辅助处理三件事。</p></div>
+  <div class="feature-grid">
+    <article class="feature"><span class="feature-number">01</span><div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M13 7h18l6 6v13M31 7v8h8M13 7v34h14M19 21h11M19 28h7"/><circle cx="34" cy="34" r="7"/><path d="m39 39 5 5"/></svg></div><h3>读懂这一次询盘</h3><p>整理产品、规格、数量与交期，保留原文依据。先补齐真正影响报价的条件。</p><div class="feature-note">输出：需求卡与补问建议</div></article>
+    <article class="feature"><span class="feature-number">02</span><div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="11" y="5" width="27" height="38" rx="3"/><path d="M17 14h15M17 21h5m6 0h4M17 28h5m6 0h4M17 35h5m6 0h4"/></svg></div><h3>准备有依据的报价</h3><p>参考企业价目表、报价规则和可比历史记录，列明费用及条件，供业务员检查。</p><div class="feature-note">输出：可复核的报价草稿</div></article>
+    <article class="feature"><span class="feature-number">03</span><div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M35 25V9H7v24h8v8l10-8h5M22 16h-8m16 6H14"/><path d="M31 40h12V28M31 40l12-12"/></svg></div><h3>跟进有下一步的客户</h3><p>结合客户反馈起草回复。无论是调整数量、补充资料还是暂缓采购，都有对应安排。</p><div class="feature-note">输出：跟进提醒与回复草稿</div></article>
+  </div>
+</section>
+<section class="workflow-section" id="workflow" aria-labelledby="workflow-title"><div class="wrap section">
+  <div class="section-kicker"><span class="mono">02 / THE WORKFLOW</span><span>一次询盘，一条完整记录</span></div>
+  <div class="section-heading"><h2 id="workflow-title">从“见过面”，<br>到“把需求说清楚”。</h2><p>产品目录、企业报价规则与历史记录提供依据。<br>业务员始终掌握价格、交期与对外承诺。</p></div>
+  <ol class="flow"><li><span>01</span><h3>展会询盘</h3><p>记录客户需求</p></li><li><span>02</span><h3>需求确认</h3><p>匹配产品与补问</p></li><li><span>03</span><h3>报价方案</h3><p>关联规则与依据</p></li><li class="human-step"><span>04</span><h3>人工审核</h3><p>确认后再发送</p></li><li><span>05</span><h3>客户跟进</h3><p>Email / WhatsApp</p></li><li><span>06</span><h3>订单确认</h3><p>双方确认交易条件</p></li></ol>
+  <div class="feedback"><span aria-hidden="true">↶</span><p>客户修改数量、规格或条件时，<strong>回到需求确认，重新准备报价。</strong></p><span class="feedback-tag">版本始终对应同一笔需求</span></div>
+  <p class="flow-caption">产品流程规划。首版以资料导入、草稿与人工确认为主；渠道接入将按试点需求逐步完善。</p>
+</div></section>
+<section class="principles section wrap" id="principles" aria-labelledby="principles-title">
+  <div class="principles-left"><div class="section-kicker"><span class="mono">03 / BUILT AROUND YOU</span></div><h2 id="principles-title">企业的规则，<br>企业来掌握。</h2><p>从你们熟悉的资料开始，<br>适配实际流程，保留人的判断。</p><div class="principle-stamp"><span>YOUR RULES.<br>YOUR DECISIONS.</span><span aria-hidden="true">↗</span></div></div>
+  <div class="principles-list"><article><span>01</span><div><h3>先用好已有资料</h3><p>从产品册和现有价目表开始，梳理可描述的报价规则。资料不足时，明确提示需要补充的信息。</p></div></article><article><span>02</span><div><h3>能解释，也能回退</h3><p>报价呈现来源与适用条件。遇到过期资料、特殊工艺或新的交付承诺，交由业务员复核。</p></div></article><article><span>03</span><div><h3>按流程配置，逐步扩展</h3><p>先选一类产品，配置字段、价格规则和审批方式。用实际使用反馈决定下一步，避免一开始就迁移整套业务。</p></div></article></div>
+</section>
+<section class="co-create" id="contact" aria-labelledby="contact-title"><div class="wrap contact-inner">
+  <div class="contact-top"><span class="eyebrow light"><span class="live-dot"></span> 招募共创企业</span><span class="mono">LET'S BUILD IT TOGETHER</span></div>
+  <div class="contact-grid"><div><h2 id="contact-title">贵司的哪一步，<br>最值得<span class="cyan">省下来？</span></h2><p>我们是香港中文大学（深圳）的学生创业团队。<br>易贸正在开发，希望先听听真实的外贸工作经验。</p><a class="button primary email-link" href="mailto:liangbowenbill@gmail.com?subject=EZTrade%20%E6%98%93%E8%B4%B8%EF%BD%9C%E4%BC%81%E4%B8%9A%E9%9C%80%E6%B1%82%E4%BA%A4%E6%B5%81">预约一次需求交流 <span aria-hidden="true">↗</span></a><div class="contact-email"><a href="mailto:liangbowenbill@gmail.com">liangbowenbill@gmail.com</a><button id="copy-email" aria-label="复制联系邮箱">复制邮箱</button><span id="copy-status" role="status"></span></div></div>
+  <div class="conversation"><span class="mono">20 MIN / 从三个问题开始</span><ol><li><span>01</span>从收到询盘到报价，哪一步最费时间？</li><li><span>02</span>客户改需求后，通常怎样更新报价？</li><li><span>03</span>哪些重复工作，最希望有人帮忙处理？</li></ol><p>适合已有海外询盘、愿意共同梳理流程的制造企业。是否进入试点及服务范围，由双方交流后商定。</p></div></div>
+</div></section>
+<section class="faq wrap section" aria-labelledby="faq-title"><div class="section-kicker"><span class="mono">04 / A FEW ANSWERS</span></div><div class="faq-grid"><h2 id="faq-title">你可能想了解</h2><div><details><summary>现在可以直接购买使用吗？<span aria-hidden="true">＋</span></summary><p>目前处于开发和需求验证阶段，正在邀请企业交流。页面展示的是计划能力与模拟流程；具体试用安排和可用功能，以双方确认的范围为准。</p></details><details><summary>会自动向客户发出报价吗？<span aria-hidden="true">＋</span></summary><p>首期以报价草稿、回复建议和人工确认为主。价格、交期、付款等对外承诺由企业人员审核，客户修改条件后需要重新复核。</p></details><details><summary>必须更换现有邮箱或业务系统吗？<span aria-hidden="true">＋</span></summary><p>首版计划支持导入资料与粘贴询盘，先配合现有工作方式使用。Email、WhatsApp等渠道的正式接入会按实际需求及平台要求逐步推进。</p></details><details><summary>主要希望和哪些企业交流？<span aria-hidden="true">＋</span></summary><p>优先关注有海外定制询盘、报价条件有一定重复性的制造企业，例如纸质包装、硅胶日用品等。最终试点行业会结合需求、资料条件和企业意愿确定。</p></details></div></div></section>
+</main>
+<footer class="footer"><div class="wrap footer-inner"><div class="footer-brand">EZTrade <span>易贸</span></div><p>让每一次跟进，都有下一步。</p><span>© <span id="year">2026</span> EZTrade 项目团队</span><a href="#">返回顶部 ↑</a></div></footer>
+</body>
+</html>
